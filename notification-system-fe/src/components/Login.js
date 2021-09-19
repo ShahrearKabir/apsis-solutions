@@ -89,6 +89,7 @@ export default class Login extends Component {
 
                             <div className="wrap-input rs2 validate-input" data-validate="Password is required">
                                 <input
+                                    type="password"
                                     className="input"
                                     name='password'
                                     placeholder={ errors['password'] || 'Password'}
