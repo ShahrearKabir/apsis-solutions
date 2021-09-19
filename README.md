@@ -1,4 +1,5 @@
 # Notification System
+- check doc folder for project details
 
 # Backend (notification-system)
 - npm install
