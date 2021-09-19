@@ -1,0 +1,21 @@
+{
+    "accessObj": {
+        "description": "",
+        "title": "CRUD",
+        "type": [
+            "Create",
+            "Update",
+            "Read",
+            "Delete"
+        ]
+    },
+    "roleObj": {
+        "description": "",
+        "name": "SUPER_ADMIN",
+        "role": "super_admin"
+    },
+    "userObj":{
+        "username": "admin@admin.com",
+        "password": "admin@123"
+    }
+}

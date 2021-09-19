@@ -1,0 +1,53 @@
+.app-topbar{
+    background: linear-gradient(175deg, #ff0885, #ff8b1d);
+
+    .navbar-brand{
+        background: url('../images/logo2.png');
+        width: 252px;
+        background-position: center;
+        height: 56px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: -16px 0px -16px -7px;
+        background-color: #ff006f;
+
+        .logo{
+            height: 23px;
+        }
+    }
+
+    .navbar-collapse{
+        padding-left: 15px;
+
+        .navbar-nav{
+            a{
+                font-weight: 600;
+                color: white;
+                border-radius: 5px;
+
+                &:hover {
+                    color: #ffffff;
+                    background-color: #00000025;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+        .sign-out{
+            cursor: pointer;
+            
+            &:hover {
+                color: #16c7ff;
+            }
+        }
+
+        .profile, .notification{
+            color: #000;
+
+            .badge{
+                position: relative;
+                top: -10px;
+            }
+        }
+    }
+    
+}

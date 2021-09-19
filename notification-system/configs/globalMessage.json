@@ -1,0 +1,43 @@
+{
+    "BAD_REQUEST": {
+        "STATUS_CODE": 400,
+        "MSG_SHORT": "Client Error",
+        "MSG_LONG": "Invalid Request Message Framing."
+    },
+    "UN_AUTH": {
+        "STATUS_CODE": 401,
+        "MSG_SHORT": "Unauthorize.",
+        "MSG_LONG": "Unauthorize! Please Login to Access."
+    },
+    "NOT_FOUND": {
+        "STATUS_CODE": 404,
+        "MSG_SHORT": "Info Not Found",
+        "MSG_LONG": "Desired Info Not Found"
+    },
+    "FORBIDDEN": {
+        "STATUS_CODE": 403,
+        "MSG_SHORT": "Forbidden.",
+        "MSG_LONG": "Forbidden! Please Login to Access."
+    },
+    "DUPLICATE": {
+        "STATUS_CODE": 409,
+        "MSG_SHORT": "Exist.",
+        "MSG_LONG": "Resource Exist."
+    },
+    "SUCCESS": {
+        "STATUS_CODE": 200,
+        "MSG_SHORT": "Success.",
+        "MSG_LONG": "Successfully Completed."
+    },
+    "UPDATED": {
+        "STATUS_CODE": 200,
+        "MSG_SHORT": "Updated.",
+        "MSG_LONG": "Successfully Updated."
+    },
+    "DELETE": {
+        "STATUS_CODE": 200,
+        "MSG_SHORT": "Deleted.",
+        "MSG_LONG": "Successfully Deleted."
+    }
+}
+
