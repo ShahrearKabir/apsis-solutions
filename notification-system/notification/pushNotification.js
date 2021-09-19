@@ -3,6 +3,7 @@ const Employee = require('../models/employee');
 const Notification = require('../models/notification');
 const nodemailer = require('nodemailer');
 const twilio = require("twilio");
+const NotificationSettings = require('../models/notificationSettings');
 
 var accountSid = "AC03393039b848be692a9859cd080245b2";
 var authToken = "31d9b84a0301ab5d372196a21211c07f";
@@ -29,6 +30,12 @@ exports.socketPushNotification = async (io) => {
             console.log("A user disconnected................");
         });
 
+        let notificationSetting = await NotificationSettings
+            .findOne({ employee_id: profileId })
+            .exec()
+
+
+        // if()
         socket.on(profileId, async (data) => {
             let dataSendTo = []
             // console.log("socket data", data);
@@ -50,10 +57,13 @@ exports.socketPushNotification = async (io) => {
         socket.on("addLeave", async (data) => {
             console.log("socket data addLeave", data);
             await notificationStore(profileId, [data.editLeaveObj.submitted_to], "addLeave", "socket", data)
-            this.emailNotification(data.userInfo && data.userInfo.manager_id && data.userInfo.manager_id.email, "addLeave", data)
-            this.smsNotification(data.userInfo && data.userInfo.manager_id && data.userInfo.manager_id.phone_number, "addLeave", data)
+            // notificationSetting.email_active == 0 ? null :
+                this.emailNotification(data.userInfo && data.userInfo.manager_id && data.userInfo.manager_id.email, "addLeave", data)
+            // notificationSetting.sms_active == 0 ? null :
+                this.smsNotification(data.userInfo && data.userInfo.manager_id && data.userInfo.manager_id.phone_number, "addLeave", data)
 
-            socket.broadcast.emit(data.editLeaveObj.submitted_to + "addLeave", data);
+            // notificationSetting.push_active == 0 ? null :
+                socket.broadcast.emit(data.editLeaveObj.submitted_to + "addLeave", data);
         })
 
         socket.on("leaveApproved", async (data) => {

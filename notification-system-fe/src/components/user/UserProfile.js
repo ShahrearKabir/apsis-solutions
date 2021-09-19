@@ -5,6 +5,7 @@ import AuthService from '../../auth/AuthService';
 import io from 'socket.io-client';
 import decode from 'jwt-decode';
 import { EmployeeLeaveApplication } from './EmployeeLeaveApplication';
+import { NotificationSettings } from './NotificationSettings';
 
 export class UserProfile extends Component {
     constructor(props) {
@@ -215,6 +216,7 @@ export class UserProfile extends Component {
                             </div>
                         </div>
                         <EmployeeLeaveApplication userInfo={userInfo} />
+                        <NotificationSettings userInfo={userInfo} />
                     </section>
                 </div>
             </>
